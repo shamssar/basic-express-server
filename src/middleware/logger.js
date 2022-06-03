@@ -1,8 +1,7 @@
 "use strict";
-function methodAndPath(req,res,next) {
-console.log('Method: ',req.method , 'Path: ',req.path) ;
-next();
+const logger = (req, res, next) => {
+    console.log('Request: ', req.method, req.path);
+    next();
 }
 
-
-module.exports=methodAndPath;
+module.exports = logger;
